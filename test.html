@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- 전체 문서는 html 로 작성한다. -->
+<html>
+<!-- 본문을 설명하는 태그 <head></head> -->
+
+<head>
+    <!-- 문서의 규칙 지정 -->
+    <meta charset="UTF-8">
+    <!-- 웹 페이지의 제목 설정 -->
+    <title>VS CODE 사용</title>
+</head>
+
+<!-- 코드 본문 <body></body> -->
+
+<body>
+    <!-- Unordered list <ul></ul>-->
+    <ul>
+        <!-- 리스트 생성 <li></li> -->
+        <!-- 닻을 나타내는 anchor의 약자 하이퍼텍스트를 만들어준다. <a></a>  -->
+        <!-- <a>의 속성인  href: 하이퍼텍스트(링크) 참조, target="_blank":새로운 탭에서 링크 열기, title:마우스 커서를 올렸을때 나오는 텍스트 -->
+        <li> 1. <a href="https://en.wikipedia.org/wiki/Cat" target="_blank" title="cat wikipedia">cat</a></li>
+        <li> 2. dog</li>
+    </ul>
+
+    <!-- Ordered list <ol></ol> 숫자 자동 생성됨 -->
+    <ol>
+        <li>yohan</li>
+        <li>bok</li>
+    </ol>
+
+    <!-- 밑줄 <u></u>-->
+    <u>hi</u>
+
+    <!-- 줄바꿈 <br>-->
+    Hello,<br><br>
+
+    <!-- 글자 강조 <strong></strong>-->
+    <strong>world</strong>!
+
+    <!-- 문장 단락 지정<p></p> -->
+    <p style="margin-top: 40px;">
+        hi hello world!
+    </p>
+    <!-- 이미지 삽입 <img> scr : 태그 속성으로 이미지파일 입력(css)  -->
+    <img src="cat&dog.jpg" width="80%">
+
+    <p>
+        <!-- 동영상 삽입 -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/U6GgEHpc_l4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </p>
+
+    <!-- 체크박스 생성 -->
+    <input type="checkbox">
+
+    <p>
+    <div id="disqus_thread"></div>
+    <!-- <script>안의 언어를 자바스크립트로 받아드린다.  -->
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://hello-pet.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+    </p>
+    <!--  document.querySelector(선택할 태그,클래스,아이디)-->
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.color = 'green';
+    document.querySelector('body').style.backgroundColor = 'black'
+
+">
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.color = 'blue';
+    document.querySelector('body').style.backgroundColor = 'white'
+
+">
+    <!-- 스타일 태그를 이용한 선택자 -->
+    <style>
+        /* js 클래스 선택자  */
+        .js {
+            font-weight: bold;
+            color: rebeccapurple;
+        }
+
+        /* first 아이디 선택자 */
+        #first {
+            color: blue;
+        }
+
+        /* <span> 태그 선택자  */
+        span {
+            color: green;
+        }
+
+        /* 선택자 우선순위 id > class > teg */
+    </style>
+
+    <p>
+        <!-- <div>스타일 속성을 위해서 아무기능이 없고 한줄을 다 사용하는 태그</div> -->
+    <div style="background-color: aqua;color: white;font-weight: bold;">Pet?</div>
+    <!-- <span>스타일 속성을 사용하기 위해서 아무기능이 없고 줄바꿈이 없는 태그 </span> -->
+    a domestic or tamed <span id="first" class="js">animal</span> kept for companionship or pleasure.
+    a domestic or tamed <span class="js">animal</span> kept for companionship or pleasure.
+    a domestic or tamed <span class="js">animal</span> kept for companionship or pleasure.
+    a domestic or tamed <span>animal</span> kept for companionship or pleasure.
+    a domestic or tamed <span>animal</span> kept for companionship or pleasure.
+
+    </p>
+
+
+</body>
+
+</html>

@@ -4,11 +4,50 @@
 <head>
     <title>Hello! Pet!</title>
     <meta charset="utf-8">
+    <script>
+        var Body = {
+            setColor: function (color) {
+                document.querySelector('body').style.color = color;
+            },
+            setBackgroundColor: function (color) {
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+        var Links = {
+            setColor: function (color) {
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = color;
+                    i = i + 1;
+                }
+            }
+        }
+        function nigtDayHandler(self) {
+            var target = document.querySelector('body');
+            if (self.value === 'night') {
+                self.value = 'day';
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                Links.setColor('powderblue');
+            }
+            else {
+                self.value = 'night';
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+
+                Links.setColor('blue');
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <h1><a href="index.html">Home</a></h1>
+    <h1 style="background-color: rgb(218, 134, 10)"><a href="index.html"><a href="index.html">Home</a></h1>
     <img src="cat&dog.jpg">
+    <input type="button" value="night" onclick="
+    nigtDayHandler(this);
+">
     <ol>
         <li>
             <a href="cat.html">cat</a>
